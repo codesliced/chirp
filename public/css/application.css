@@ -21,6 +21,20 @@ input[type=submit] {
   background-color: white;
 }
 
+button {
+  border: none;
+  background-color: white;
+}
+
+a:link {
+  color: white;
+}
+
+a:hover{
+  color: yellow;
+}
+
+
   @import url(http://devsarray.com.ar/hernan/reset.css);
   body{
     width:100%;

@@ -24,19 +24,9 @@ get '/auth' do
   
 end
 
-# post '/new/tweet' do
-#   twitter_client.update(params[:body])
-#   unless request.xhr?
-#     erb :tweet
-#   end
-# end
-
-
 post '/' do
 
   tweet = params[:tweet]
-  # tweet_obj = Tweet.create(:content => params[:tweet], :published_at => Time.now, :user_id => current_user.id)
-  # Twitter.update(tweet_obj.content)
   client = Twitter::Client.new(
     :oauth_token => current_user.oauth_token,
     :oauth_token_secret => current_user.oauth_secret
@@ -44,8 +34,5 @@ post '/' do
   puts client.inspect
   client.update(tweet)
   redirect "/"
-  # unless request.xhr?
-  #   erb :tweet
-  # end
   
 end
