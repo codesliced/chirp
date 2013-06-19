@@ -23,11 +23,12 @@ input[type=submit] {
 
 button {
   border: none;
-  background-color: white;
+  background-color: #15aed8;
 }
 
 a:link {
   color: white;
+  text-decoration: none;
 }
 
 a:hover{
